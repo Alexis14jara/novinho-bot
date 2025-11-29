@@ -5,6 +5,8 @@
 
 El bot utiliza **whatsapp-web.js**, permitiendo automatizar envíos, registrar números, personalizar mensajes y trabajar con archivos **Excel/CSV** para manejar bases de datos de contactos. Todo esto manteniendo una estructura simple, estable y fácil de escalar.
 
+![App Screenshot](./image/cap1.png)
+
 
 ## Características principales 👌
 
@@ -77,14 +79,14 @@ ABRE UN CMD Y EJECUTA:
 Agrega los números de telefonos con su prefijo en la primera columna.
 **Ejemplo:**
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./image/cap3.png)
 
 **Modifica los tres mensajes predeterminados.** Agrega más si consideras necesario.\
 Separa por "," cada mensaje:
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
+![App Screenshot](./image/cap2.png)
 
-Ejecuta, escanea el código que aparece en términal desde WhatsApp y empezará a trabajar. El proceso de escaneo de qr solo es la primera vez.
+**Ejecuta, escanea el código que aparece en términal desde WhatsApp** y empezará a trabajar. El proceso de escaneo de qr **solo es la primera vez**.
 ## Support
 
-Para soporte, gmail alnexstudio.dev@gmail.com o mi instagram buscando: @NovinhoDev
+Para soporte, gmail alnexstudio.dev@gmail.com o mi instagram buscando: **@NovinhoDev**
