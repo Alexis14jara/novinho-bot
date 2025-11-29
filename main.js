@@ -66,7 +66,7 @@ console.log("Conectando...");
 // ========================================
 async function enviarMensajesDesdeExcel() {
 
-    await esperar(2000); // Espera 2 segundos para asegurar que el cliente esté listo
+    await esperar(4000); // Espera 4 segundos para asegurar que el cliente esté listo
     console.log("📂 Leyendo archivo Excel...\n ");
     await esperar(4000); // Espera 4 segundos
     console.log("Lectura exitosa. Iniciando envíos...\n\n ");
@@ -110,8 +110,8 @@ async function enviarMensajesDesdeExcel() {
             console.log(` ⮑ ❌ Número No Registrado En WhatsApp\n `);
         }
 
-        // Esperar 30 segundos entre cada envío
-        await esperar(40000);
+        // Esperar 40 segundos entre cada envío
+        await cuentaRegresiva(40);
     }
 
     console.log("------------------------------------")
@@ -125,4 +125,25 @@ async function enviarMensajesDesdeExcel() {
 // ========================================
 function esperar(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+// ========================================
+// FUNCIÓN: Cuenta Regresiva
+// ========================================
+async function cuentaRegresiva(segundos) {
+    return new Promise(resolve => {
+        let tiempo = segundos;
+
+        const intervalo = setInterval(() => {
+            process.stdout.write(`⏳ Siguiente mensaje en: ${tiempo}s   \r`);
+            tiempo--;
+
+            if (tiempo < 0) {
+                clearInterval(intervalo);
+                process.stdout.write("\n"); // Salto de línea limpio al terminar
+                resolve();
+            }
+        }, 1000);
+    });
 }
